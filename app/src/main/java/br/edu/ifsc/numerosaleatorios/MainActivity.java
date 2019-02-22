@@ -23,18 +23,10 @@ public class MainActivity extends AppCompatActivity {
         Button b = (Button)view;
         TextView text=(TextView) findViewById(R.id.textView);
         EditText edit =(EditText)findViewById(R.id.editText);
-        if(a==0){
-            b.setText("OLÁ");
-            text.setText(edit.getText());
-            a=1;
-        }else{
-            b.setText("ATÉ");
-            text.setText("volta mundo");
-            a=0;
-        }
+        EditText edit2 =(EditText)findViewById(R.id.editText2);
 
+        double n= Math.floor(Math.random() * (Integer.parseInt(edit2.getText().toString()) - Integer.parseInt(edit.getText().toString()))) + Integer.parseInt(edit.getText().toString());
 
-
-
+            text.setText(String.valueOf((int)n));
     }
 }
